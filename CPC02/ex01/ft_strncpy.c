@@ -1,15 +1,16 @@
-char *ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int c_des;
-	int c_src;
-	int i;
+	int	c_des;
+	int	c_src;
+	int	i;
 
-	c_des = -1;
-	c_src = -1;
+	c_des = 0;
+	c_src = 0;
 	i = 0;
-	while (dest[++c_des] != '\0');
-	while (src[++c_src] != '\0');
-
+	while (dest[c_des] != '\0')
+		c_des++;
+	while (src[c_src] != '\0')
+		c_src++;
 	if ( c_src == 0 )
 	{
 		while (c_des--)
