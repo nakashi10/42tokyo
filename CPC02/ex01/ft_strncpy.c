@@ -24,6 +24,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 			i++;
 		}
 	}
+	return (dest);
 }
 
 /*#include <stdio.h>
