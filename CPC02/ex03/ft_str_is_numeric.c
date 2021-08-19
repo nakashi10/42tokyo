@@ -1,12 +1,11 @@
-int ft_str_is_numeric(char *str)
+int	ft_str_is_numeric(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while (str[++i] != '\0');
 	if (str == "")
-		return 1;
-	while (i--)
+		return (1);
+	while (str[++i] != '\0')
 	{
 		if (!(str[i] >= 48 && str[i] <= 57))
 			return (0);

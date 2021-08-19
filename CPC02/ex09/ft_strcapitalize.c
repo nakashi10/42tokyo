@@ -1,11 +1,11 @@
-char *ft_strcapitalize(char *str)
+char	*ft_strcapitalize(char *str)
 {
-	int i;
+	int	i;
 
 	i = -1;
-	while ( str[++i] != '\0')
+	while (str[++i] != '\0')
 	{
-		if ( i == 0 )
+		if (i == 0 )
 		{
 			if (str[i] >= 97 && str[i] <= 122)
 				str[i] -= 32;

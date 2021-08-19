@@ -16,8 +16,8 @@ void	ft_putnbr(int nb)
 	g_dn = 0;
 	g_dtotal = 0;
 	g_ex = 0;
-	if (nb > 2147483647 || nb < -2147483648)
-		return ;
+	if (nb == -2147483648)
+		write(1, "-2147483648", 11);
 	if (nb == 0)
 		put_char(0);
 	if (nb < 0)
@@ -70,9 +70,4 @@ int	put_n(int g_n)
 	g_n = g_n * -1;
 	write(1, "-", 1);
 	return (g_n);
-}
-
-int main()
-{
-	ft_putnbr(43242);
 }

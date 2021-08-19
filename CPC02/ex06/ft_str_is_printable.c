@@ -1,12 +1,11 @@
-int ft_str_is_printable(char *str)
+int	ft_str_is_printable(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while (str[++i] != '\0');
 	if (str == "")
-		return 1;
-	while (i--)
+		return (1);
+	while (str[++i] != '\0')
 	{
 		if (!(str[i] >= 20 && str[i] <= 127))
 			return (0);
