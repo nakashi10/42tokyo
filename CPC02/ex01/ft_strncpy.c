@@ -11,7 +11,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		c_des++;
 	while (src[c_src] != '\0')
 		c_src++;
-	if ( c_src == 0 )
+	if ( c_src == 0)
 	{
 		while (c_des--)
 			dest[c_des] = '\0';
