@@ -2,23 +2,20 @@ int	ft_str_is_alpha(char *str)
 {
 	int	i;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	if (str == "" )
+	if (str[0] == '\0' )
 		return (1);
-	while (i--)
+	i = -1;
+	while (str[i] != '\0')
 	{
-		if (!(str[i] >= 97 && str[i] <= 122))
+		if (!((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')))
 			return (0);
 	}
 	return (1);
 }
 
-/*#include <stdio.h>
+#include <stdio.h>
 int	main()
 {
-	printf("answer: %d",ft_str_is_alpha("2za"));
+	printf("answer: %d",ft_str_is_alpha("+LKjfa"));
 	return 0;
 }
-*/
