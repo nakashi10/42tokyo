@@ -7,43 +7,42 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	c_des = 0;
 	c_src = 0;
 	i = 0;
-	while (dest[c_des] != '\0')
-		c_des++;
 	while (src[c_src] != '\0')
 		c_src++;
 	if (c_src == 0)
 	{
-		while (c_des--)
+		while (dest[c_des] != '\0')
 			dest[c_des] = '\0';
 	}
 	else
 	{
-		while (n--)
+		while (n != 0)
 		{
 			dest[i] = src[i];
 			i++;
+			n--;
 		}
 	}
 	return (dest);
 }
 
-/*#include <stdio.h>
+#include <stdio.h>
 #include <string.h>
 int main()
 {
-	char dest[] = "ABCDEFGHI";
-	char src[] = "12345";
-	char dest2[] = "ABCDEFGHI";
-	char src2[] = "12345";
+	char dest[] = "ABCD";
+	char src[] = "12345678";
+	char dest2[] = "ABCD";
+	char src2[] = "12345678";
 
-	ft_strncpy(dest, src, 3);
+	// ft_strncpy(dest, src, 2);
+	// printf("zibun: %s\n", dest);
+	ft_strncpy(dest, src, 9);
 	printf("zibun: %s\n", dest);
-	ft_strncpy(dest, src, 8); // ②s2の長さがnより少ない場合
-	printf("zibun: %s\n", dest);
-	strncpy(dest2, src2, 3); // ①s2の長さがn以上のとき
-	printf("mihon: %s\n", dest2);
-	strncpy(dest2, src2, 8); // ②s2の長さがnより少ない場合 
+	// strncpy(dest2, src2, 2);
+	// printf("mihon: %s\n", dest2);
+	strncpy(dest2, src2, 9);
 	printf("mihon: %s\n", dest2);
 
 	return 0;
-}*/
+}
